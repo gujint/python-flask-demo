@@ -1,4 +1,10 @@
 # 列出项目的依赖库，用于记录 Flask 和其他包的版本信息。
 Flask>=2.3.0
 requests>=2.31.0
+
 python-dotenv>=1.0.0
+
+# 核心：FastAPI+uvicorn+gunicorn（生产环境缺一不可）
+fastapi==0.104.1
+uvicorn==0.24.0.post1  # 运行FastAPI的ASGI服务器
+gunicorn==21.2.0       # 主进程管理，适配Render生产环境
