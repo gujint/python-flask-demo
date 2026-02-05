@@ -1,0 +1,4 @@
+# 列出项目的依赖库，用于记录 Flask 和其他包的版本信息。
+Flask>=2.3.0
+requests>=2.31.0
+python-dotenv>=1.0.0
