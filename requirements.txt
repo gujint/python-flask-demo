@@ -4,7 +4,7 @@ requests>=2.31.0
 
 python-dotenv>=1.0.0
 
-# 核心：FastAPI+uvicorn+gunicorn（生产环境缺一不可）
-fastapi==0.104.1
-uvicorn==0.24.0.post1  # 运行FastAPI的ASGI服务器
-gunicorn==21.2.0       # 主进程管理，适配Render生产环境
+# Flask服务核心依赖（Render生产环境必装）
+flask==2.3.3  # 可替换成你本地使用的Flask版本
+gunicorn==21.2.0  # 生产环境运行Flask的核心，缺一不可
+
