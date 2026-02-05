@@ -25,5 +25,14 @@ def get_hot_news():
         'data': news
     })
 
+# 注释/删除原来的这一行
+# if __name__ == '__main__':
+#     app.run(debug=True)  
+
+# 替换成这个部署版启动代码（适配Render，本地运行也兼容）
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(
+        host='0.0.0.0',  # 必须绑定，否则Render内部无法访问你的服务
+        port=int(os.getenv('PORT', 5000)),  # 用Render的$PORT环境变量，本地运行默认5000
+        debug=False  # 生产环境强制关闭debug，避免安全风险+Render服务异常
+    )
